@@ -3,9 +3,10 @@ import { Location } from  '@angular/router';
 
 @Injectable()
 export class WixService {
+  private url;
 
   constructor(location: Location) {
-    this.url = location.pathname;
+    this.url = location;
   }
 
   getInstance() {
