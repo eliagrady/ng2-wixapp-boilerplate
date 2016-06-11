@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Location } from  '@angular/router';
+import { Location } from  '@angular/common';
 
 @Injectable()
 export class WixService {
   private url;
 
   constructor(location: Location) {
-    this.url = location;
+    this.url = location.path();
   }
 
   getInstance() {
